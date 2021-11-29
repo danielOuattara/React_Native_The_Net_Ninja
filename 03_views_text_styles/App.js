@@ -32,6 +32,5 @@ const styles = StyleSheet.create({
   body: {
     backgroundColor: "yellow",
     padding: 20
-
   }
 });
