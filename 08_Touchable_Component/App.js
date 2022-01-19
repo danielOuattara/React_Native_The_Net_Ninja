@@ -1,6 +1,8 @@
 
 import React,  {useState} from 'react';
-import { StyleSheet, Text, View, /* ScrollView */ FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
+
+
 
 export default function App() {
 
@@ -18,7 +20,6 @@ export default function App() {
   ]);
 
   const handlePress = (id) => {
-    // console.log(id);
     setPeople((prevPeople) => {
       return prevPeople.filter( person => person.id !== id);
     });
@@ -30,7 +31,7 @@ export default function App() {
         data={people}
         keyExtractor={(item) => item.id }
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={()=> handlePress(item.id)}>
+          <TouchableOpacity onPress={() => handlePress(item.id)}>
             <Text style={styles.person}>{item.name}</Text>
           </TouchableOpacity>
         )}

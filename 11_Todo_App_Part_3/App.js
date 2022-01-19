@@ -26,7 +26,7 @@ export default function App() {
           {
             text: newTodoItem,
             completed: false,
-            key: String(previousTodos.length + 1)
+            key: Math.random().toString()
           },
       ])
     });

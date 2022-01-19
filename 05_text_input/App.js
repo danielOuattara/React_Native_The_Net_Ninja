@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-
 import { StyleSheet, Text, View, TextInput } from 'react-native';
+
 
 export default function App() {
 
@@ -16,7 +16,7 @@ export default function App() {
         multiline
         style={styles.input} 
         placeholder="example: John Doe"
-        onChangeText= {(val) => setName(val)}
+        onChangeText={(val) => setName(val)}
       />
 
       <Text>Enter your age : </Text>
@@ -24,7 +24,7 @@ export default function App() {
       keyboardType="numeric"
         style={styles.input} 
         placeholder="example: 77"
-        onChangeText= {(val) => setAge(val)}
+        onChangeText={(val) => setAge(val)}
       />
 
       <Text>name: {name}, age: {age}</Text>

@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 export default function App() {
@@ -13,22 +12,20 @@ export default function App() {
     {name: 'Natalia',  key: '5'},
     {name: 'Raphaël',  key: '6'},
     {name: 'Daria',    key: '7'},
-    {name: 'Gabriel',  key: '8'},
+    {name: 'Gabriel',  key: '8'}, 
     {name: 'Nathan',   key: '9'},
     {name: 'Marouan',  key: '10'},
   ]);
 
-
   return (
     <View style={styles.container}>
       <ScrollView>
-        { people.map((person) => {
-          return (
+        { people.map((person) =>(
               <View key={person.key}>
                   <Text style={styles.person}>{person.name}</Text>
               </View>
-            );
-          })
+            )
+          )
         }
       </ScrollView>
     </View>

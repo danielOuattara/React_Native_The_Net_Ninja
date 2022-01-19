@@ -7,6 +7,13 @@ export default function AddTodoItem({ handleAddTodoItem }) {
 
     const [ newItemTitle, setNewItemTitle] = useState("");
 
+    const sendNewTodoItem = (newItemTitle) => {
+        if(newItemTitle) {
+            handleAddTodoItem(newItemTitle);
+            setNewItemTitle("");
+        }
+    }
+
     return (
         <View>
             <TextInput 
@@ -14,8 +21,9 @@ export default function AddTodoItem({ handleAddTodoItem }) {
                 multiline
                 placeholder="Enter a new todo ..."
                 onChangeText= {(value) => setNewItemTitle(value)}
+                value={newItemTitle}
             />
-            <TouchableOpacity onPress={() => handleAddTodoItem(newItemTitle)}>
+            <TouchableOpacity onPress={() => sendNewTodoItem(newItemTitle)}>
                 <Text style={styles.todoItem}> ADD TODO</Text>
             </TouchableOpacity>
         </View>

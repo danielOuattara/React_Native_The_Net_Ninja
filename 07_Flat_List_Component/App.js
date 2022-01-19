@@ -33,18 +33,6 @@ export default function App() {
 
   return (
     // <View style={styles.container}>
-    //   {/* <ScrollView>
-    //     { people.map((person) => {
-      //       return (
-        //           <View key={person.key}>
-        //               <Text style={styles.person}>{person.name}</Text>
-        //           </View>
-        //         );
-        //       })
-        //     }
-      //   </ScrollView> */}
-      // </View>
-    
     // ---------------------------------------------------------------
       
     // <View style={styles.container}>
@@ -56,17 +44,6 @@ export default function App() {
     //   />
     // </View>
 
-    // ---------------------------------------------------------------
-      
-    // <View style={styles.container}>
-    //   <FlatList 
-    //     data={people}
-    //     keyExtractor={(item) => item.id }
-    //     renderItem={({ item }) => (
-    //       <Text style={styles.person}>{item.name}</Text>
-    //     )}
-    //   />
-    // </View>
     // ---------------------------------------------------------------
       
     <View style={styles.container}>

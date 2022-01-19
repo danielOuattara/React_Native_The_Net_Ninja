@@ -11,22 +11,40 @@ export default function App() {
     age: 36,
   });
 
-  const clickHandlerOne = () => {
-    console.log(name)
-    name === "Daniel" ? setName("Daniel Ouattara") : setName("Daniel");
-    // setName("Daniel Ouattara");
-    // setTimeout(() => {
-    //   setName("Daniel");
-    // }, 3000)
-  }
-  const clickHandlerTwo = () => {
-    console.log(person);
-    // setPerson({
-    //   name: "Gaïa",
-    //   age: 4
-    // });
+  // const clickHandlerOne = () => {
+  //   console.log(name)
+  //   setName("Daniel Ouattara");
+  // }
 
-     person.name === "Julie"&& person.age === 36 ? 
+  // const clickHandlerOne = () => {    
+  //   setTimeout(() => {
+  //         setName("Daniel Boua");
+  //       }, 3000)     
+  // }
+
+  const clickHandlerOne = () => {      
+      name === "Daniel" ? setName("Daniel Ouattara") : setName("Daniel");
+  }
+
+  // const clickHandlerTwo = () => {
+  //   setPerson({
+  //     name: "Gaïa",
+  //     age: 4
+  //   });
+  // }
+
+  // const clickHandlerTwo = () => {
+  //   setTimeout(()=> {
+  //       setPerson({
+  //           name: "Julie",
+  //           age: 36
+  //         });
+  //       } , 3000)
+  // }
+
+  const clickHandlerTwo = () => {
+    person.name === "Julie" && person.age === 36 ? 
+>>>>>>> Stashed changes
       setPerson({name: "Gaïa", age: 4}) : setPerson({name: "Julie", age: 36})
        
     // setTimeout(()=> {
@@ -45,13 +63,13 @@ export default function App() {
       <Text>My name is {name}</Text>
 
       <View style= {styles.buttonContainer}>
-        <Button title="update state" onPress= {clickHandlerOne}/>
+        <Button title="update state" onPress={clickHandlerOne}/>
       </View>
 
       <Text>My name is {person.name} I am {person.age} y.o</Text>
       
       <View style= {styles.buttonContainer}>
-        <Button title="update state" onPress= {clickHandlerTwo}/>
+        <Button title="update state" onPress={clickHandlerTwo}/>
       </View>
     
     </View>

@@ -44,9 +44,9 @@ const styles = StyleSheet.create({
     // body
     flex: 1,
     backgroundColor: '#fff',
-    borderColor: 'yellow',
+    borderColor: 'blue',
     borderStyle: 'solid',
-    borderWidth: 2
+    borderWidth: 3
   },
 
   content: {
