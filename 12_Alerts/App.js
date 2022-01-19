@@ -1,9 +1,10 @@
-
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, FlatList, Alert } from 'react-native';
 import  Header from './components/Header'
 import TodoItem from './components/TodoItem';
 import AddTodoItem from './components/AddTodoItem';
+
+
 
 export default function App() {
   const [ todos, setTodos ] = useState([
@@ -12,13 +13,11 @@ export default function App() {
     {text: 'paly football', completed: false, key: '3'},
   ]);
 
-
   const handleRemoveItem = (key) => {
     setTodos((prevTodos) => {
       return prevTodos.filter(person => person.key !== key);
     });
   }
-
 
   const handleAddTodoItem = (newTodoItemTitle) => {
     if(newTodoItemTitle.length > 3) {
@@ -34,9 +33,16 @@ export default function App() {
       });
 
     } else {
-      Alert.alert('ERROR', 'Minimum 3 characters long', [
-        {text: "AGREE", onPress: () => console.log('Alert closed !')}
-      ]);
+      Alert.alert(
+        'ERROR', 
+        'Minimum 3 characters long', 
+        [
+          {
+            text: "AGREE", 
+            onPress: () => console.log('Alert closed !')
+          }
+        ]
+      );
     }
   }
 

@@ -1,11 +1,16 @@
 
 import React, {useState} from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
 
 
 export default function AddTodoItem({ handleAddTodoItem }) {
 
     const [ newItemTitle, setNewItemTitle] = useState("");
+
+    const sendNewTodoItem = (newItemTitle) => {
+            handleAddTodoItem(newItemTitle);
+            setNewItemTitle("");
+    }
 
     return (
         <View>
@@ -14,8 +19,9 @@ export default function AddTodoItem({ handleAddTodoItem }) {
                 multiline
                 placeholder="Enter a new todo ..."
                 onChangeText= {(value) => setNewItemTitle(value)}
+                value={newItemTitle}
             />
-            <TouchableOpacity onPress={() => handleAddTodoItem(newItemTitle)}>
+            <TouchableOpacity onPress={() => sendNewTodoItem(newItemTitle)}>
                 <Text style={styles.todoItem}> ADD TODO</Text>
             </TouchableOpacity>
         </View>
@@ -43,3 +49,4 @@ const styles = StyleSheet.create({
         fontSize: 20,
     }
 });
+
