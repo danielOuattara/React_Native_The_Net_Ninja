@@ -16,20 +16,19 @@ export default function SandBoxFlexBox() {
 
 const styles = StyleSheet.create({
     container: {
+        // flex: 1,
         paddingTop: 40,
         backgroundColor: '#aaa',
-        borderColor:'blue',
-        // flex: 1,
         // flexDirection: 'column',  // default
         flexDirection: 'row',
         // justifyContent:'center',
         // justifyContent:'flex-end',
-        // justifyContent:'space-around',
+        justifyContent:'space-around',
         // justifyContent:'space-between',
-        justifyContent:'space-evenly',
+        // justifyContent:'space-evenly',
         // alignItems:'flex-start',
         alignItems:'flex-end',
-        flexWrap: 'wrap'
+        // flexWrap: 'wrap'
     },
     boxOne: {
         backgroundColor:'violet',
@@ -39,16 +38,16 @@ const styles = StyleSheet.create({
     boxTwo: {
         backgroundColor:'gold',
         padding: 20,
-        flex: 5,
+        // flex: 5,
     },
     boxThree: {
         backgroundColor: 'coral',
         padding: 30,
-        flex: 1,
+        // flex: 1,
     },
     boxFour: {
         backgroundColor: 'lightgreen',
         padding: 40,
-        flex: 1,
+        // flex: 2,
     },
 });
