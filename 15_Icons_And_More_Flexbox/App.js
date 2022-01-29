@@ -1,10 +1,10 @@
 
-import React, {useState} from 'react';
-import { Alert, FlatList, Keyboard, StyleSheet, Text, TouchableWithoutFeedback, View, } from 'react-native';
-import  Header from './components/Header'
+import React, { useState } from 'react';
+import { Alert, FlatList, Keyboard, StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
+import Header from './components/Header';
 import TodoItem from './components/TodoItem';
 import AddTodoItem from './components/AddTodoItem';
-import SandBoxFlexBox from './components/FlexboxSandBox';
+// import SandBoxFlexBox from './components/FlexboxSandBox';
 
 export default function App() {
   const [ todos, setTodos ] = useState([
@@ -44,7 +44,6 @@ export default function App() {
   return (
     // <SandBoxFlexBox />
     <TouchableWithoutFeedback onPress={() =>  {
-      console.log("Phone Screen Touched !");
       Keyboard.dismiss();
     }}>
       <View style={styles.container}> 

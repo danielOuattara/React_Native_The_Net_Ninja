@@ -4,14 +4,13 @@ import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-nativ
 
 
 export default function AddTodoItem({ handleAddTodoItem }) {
-
     const [ newItemTitle, setNewItemTitle] = useState("");
-
     const HandleReturnTitle = (newItemTitle) => {
         handleAddTodoItem(newItemTitle);
         if(newItemTitle.length > 3) {
             textInput.clear()
         }
+        setNewItemTitle("");
     }
 
     return (
@@ -21,7 +20,7 @@ export default function AddTodoItem({ handleAddTodoItem }) {
                 multiline
                 placeholder="Enter a new todo ..."
                 onChangeText= {(value) => setNewItemTitle(value)}
-                ref={input => {textInput = input }}
+                ref={input => textInput = input}
             />
             <TouchableOpacity onPress={() => HandleReturnTitle(newItemTitle)}>
                 <Text style={styles.todoItem} value={newItemTitle}> ADD TODO</Text>
@@ -31,6 +30,13 @@ export default function AddTodoItem({ handleAddTodoItem }) {
 }
 
 const styles = StyleSheet.create({
+    todoInput: {
+        borderBottomWidth: 1,
+        borderColor: "#777",
+        padding: 8,
+        marginBottom: 10,
+        fontSize: 20,
+    },
     todoItem: {
         padding: 10,
         color: '#fff',
@@ -42,12 +48,4 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         backgroundColor: 'coral'
     },
-
-    todoInput: {
-        borderBottomWidth: 1,
-        borderColor: "#777",
-        padding: 8,
-        marginBottom: 10,
-        fontSize: 20,
-    }
 });
