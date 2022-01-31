@@ -6,8 +6,10 @@ import globalStyles from '../styles/global';
 
 export default function ReviewDetails({navigation}) {
     return (
-        <View style={globalStyles.container}>
-            <Text style={globalStyles.titleText}>Reviews DetailsScreen</Text>
-        </View>
+
+                <View style={globalStyles.container}>
+                    <Text style={globalStyles.titleText}>Reviews DetailsScreen</Text>
+                </View>
+
     );
 }
