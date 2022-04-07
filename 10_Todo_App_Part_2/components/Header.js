@@ -1,33 +1,31 @@
-
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Header() {
-    return (
-        <View style={styles.header}>
-            <Text style={styles.title}>My Todos</Text>
-        </View>
-    );
+  return (
+    <View style={styles.header}>
+      <Text style={styles.title}>My Todos</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    header: {
-        height: 100,
-        paddingTop: 42,
-        backgroundColor: 'coral',
-        borderColor: 'magenta',
-        borderStyle: 'solid',
-        borderWidth: 3,
-        marginBottom: 3,
-        marginLeft: 3,
-        marginRight: 3,
-    },
+  header: {
+    height: 100,
+    paddingTop: 42,
+    backgroundColor: "coral",
+    borderColor: "magenta",
+    borderStyle: "solid",
+    borderWidth: 3,
+    marginBottom: 3,
+    marginLeft: 3,
+    marginRight: 3,
+  },
 
-    title: {
-        textAlign: 'center',
-        color: '#fff',
-        fontSize: 30,
-        fontWeight: 'bold'
-    }
+  title: {
+    textAlign: "center",
+    color: "#fff",
+    fontSize: 30,
+    fontWeight: "bold",
+  },
 });
