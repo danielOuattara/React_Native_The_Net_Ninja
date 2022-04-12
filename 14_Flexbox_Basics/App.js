@@ -8,10 +8,11 @@ import {
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-// import Header from "./components/Header";
-// import TodoItem from "./components/TodoItem";
-// import AddTodoItem from "./components/AddTodoItem";
-import SandBoxFlexBox from './components/FlexboxSandBox';
+import Header from "./components/Header";
+import TodoItem from "./components/TodoItem";
+import AddTodoItem from "./components/AddTodoItem";
+
+// import SandBoxFlexBox from './components/FlexboxSandBox';
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -48,28 +49,29 @@ export default function App() {
   /* Note: Right now ToucheableWhithoutFeedBack allows to listen to touch anywhere 
          on the phone screen except Form & Button zones */
   return (
-    <SandBoxFlexBox />
-    // <TouchableWithoutFeedback
-    //   onPress={() => {
-    //     console.log("Phone Screen Touched !");
-    //     Keyboard.dismiss();
-    //   }}
-    // >
-    //   <View style={styles.container}>
-    //     <Header />
-    //     <View style={styles.content}>
-    //       <AddTodoItem handleAddTodoItem={handleAddTodoItem} />
-    //       <View style={styles.list}>
-    //         <FlatList
-    //           data={todos}
-    //           renderItem={({ item }) => (
-    //             <TodoItem item={item} handleRemoveItem={handleRemoveItem} />
-    //           )}
-    //         />
-    //       </View>
-    //     </View>
-    //   </View>
-    // </TouchableWithoutFeedback>
+    // <SandBoxFlexBox />
+
+    <TouchableWithoutFeedback
+      onPress={() => {
+        console.log("Phone Screen Touched !");
+        Keyboard.dismiss();
+      }}
+    >
+      <View style={styles.container}>
+        <Header />
+        <View style={styles.content}>
+          <AddTodoItem handleAddTodoItem={handleAddTodoItem} />
+          <View style={styles.list}>
+            <FlatList
+              data={todos}
+              renderItem={({ item }) => (
+                <TodoItem item={item} handleRemoveItem={handleRemoveItem} />
+              )}
+            />
+          </View>
+        </View>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
