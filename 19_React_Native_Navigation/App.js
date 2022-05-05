@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import Home from './screens/Home';
 import { Image, View, ScrollView } from 'react-native';
 import * as Font from 'expo-font';
 import { Asset } from 'expo-asset';
 import AppLoading from 'expo-app-loading';
-
 
 const getFonts = () => Font.loadAsync({
     'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
